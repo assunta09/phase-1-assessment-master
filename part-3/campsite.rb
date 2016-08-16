@@ -1,4 +1,9 @@
+require_relative 'camper_actions'
+
 class Campsite
+  include Reservation
+  include AssignedEmployee
+
   attr_reader :location, :square_footage
   attr_accessor :assigned_employee
 
@@ -17,23 +22,5 @@ class Campsite
     @water
   end
 
-  def reserve
-    @reserved = true
-  end
 
-  def end_reservation
-    @reserved = false
-  end
-
-  def reserved?
-    @reserved
-  end
-
-  def available?
-    !reserved?
-  end
-
-  def assigned?
-    !!@assigned_employee
-  end
 end
