@@ -1,4 +1,5 @@
 class Invoice
+  include AssignedEmployee
   attr_reader :amount, :due_date, :invoicee
   attr_accessor :assigned_employee
 
@@ -8,7 +9,4 @@ class Invoice
     @invoicee = args.fetch(:invoicee)
   end
 
-  def assigned?
-    !!@assigned_employee
-  end
 end

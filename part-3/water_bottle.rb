@@ -1,36 +1,13 @@
+require_relative 'camper_actions'
+
 class WaterBottle
+  include Reservation
+  include Damage
   attr_reader :capacity, :material
 
   def initialize(args = {})
-    @capacity = args.fetch(:capacity) { 2 }
+    @capacity = args.fetch(:capacity) { 2 } #Q: does it make sense to take this into a separate function?
     @material = args.fetch(:material) { "tin" }
   end
 
-  def reserve
-    @reserved = true
-  end
-
-  def end_reservation
-    @reserved = false
-  end
-
-  def reserved?
-    @reserved
-  end
-
-  def available?
-    !reserved?
-  end
-
-  def damaged?
-    @damaged
-  end
-
-  def record_damage
-    @damaged = true
-  end
-
-  def repair
-    @damaged = false
-  end
 end

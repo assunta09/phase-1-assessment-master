@@ -1,23 +1,12 @@
-class IncidentReport
-  attr_reader :description, :reporter
-  attr_accessor :assigned_employee
+require_relative 'reports'
+
+class IncidentReport < Report
+  attr_reader :reporter
 
   def initialize(args = {})
-    @description = args.fetch(:description) { "Unknown damage" }
     @reporter = args.fetch(:reporter) { "anonymous" }
-    @resolved = false
+    super
   end
 
-  def resolved?
-    !!@resolved
-  end
-
-  def close
-    @resolved = true
-  end
-
-  def assigned?
-    !!@assigned_employee
-  end
 end
 

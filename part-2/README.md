@@ -52,7 +52,6 @@ behaves when told to supply a match for a sock.  This group of tests is
 `#supply_match_for` method, from the root directory run:
 
 
-
 ```
 rspec --tag supply_match_for
 ```
