@@ -64,9 +64,7 @@ The three tests in the example group should be failing.  Update the
 
 ### Release 1:  `SockDrawer#supply_one_pair_of_socks`
 
-Now pretend we need a pair of socks.  We don't have any particular sock for the
-sock drawer to match.  Instead, we want the sock drawer to give us any pair of
-socks that it can find among its socks.
+Now pretend we need a pair of socks.  We don't have any particular sock for the sock drawer to match.  Instead, we want the sock drawer to give us any pair of socks that it can find among its socks.
 
 A group of tests is provided to describe how an instance of `SockDrawer`
 behaves when told to supply an arbitrary pair of socks.  This group of tests is
